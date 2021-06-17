@@ -25,14 +25,12 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
 
-//yes questions[0] is defined; currently you are not putting the user response somewhere
-//maybe something like....very close to that almost there....
 candidateAnswers.push(input.question("1)" + questions[0]));
-//input.question("1)" + questions[0]) //here it looks like you are asking the question, but now saving the answer somewhere
-console.log("Your Answer:" + (candidateAnswers[0])) //this is what is giving you that function in your answer in the console
+
+console.log("Your Answer:" + (candidateAnswers[0])) 
 console.log("Correct Answer:" + correctAnswers[0])
 console.log("")
-candidateAnswers.push(input.question("2)" + questions[1]));//so you will have to do something similar to this area that we did on 30?
+candidateAnswers.push(input.question("2)" + questions[1]));
 console.log("Your Answer:" + candidateAnswers[1])
 console.log("Correct Answer:" + correctAnswers[1])
 console.log("")
@@ -53,16 +51,20 @@ console.log("Correct Answer:" + correctAnswers[4])
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+let correctCandidateAnswers = 0; 
+let overallGrade = (correctCandidateAnswers.length/questions.length)*100
+for (let i = 0; i < candidateAnswers.length; i ++) {
+  if (candidateAnswers[i] === correctAnswers[i]) {
+    correctCandidateAnswers = overallGrade
+  
 
+  console.log(correctCandidateAnswers)
 
-  let grade = 20% 
-   (candidateAnswers === correctAnswers) 
-  console.log(grade)
-   
-
-  return grade;
+  
+  return grade = 0;
 }
-
+}
+} 
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
